@@ -115,6 +115,8 @@ export default {
         padding: 5px;
         width: 710px;
         background-color: #ffffff;
+        height: 700px;
+        overflow-x: auto;
       }
       .modal-footer{
         display:none;

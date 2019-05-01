@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Teams from '@/components/Teams'
 import Matches from '@/components/Matches'
 import Players from '@/components/Players'
-import PlayerMatch from '@/components/PlayerMatch'
 import Seasons from '@/components/Season'
 
 Vue.use(Router)
@@ -24,11 +23,6 @@ export default new Router({
       path: '/players',
       name: 'Players',
       component: Players
-    },
-    {
-      path: '/playermatch',
-      name: 'PlayerMatch',
-      component: PlayerMatch
     },
     {
       path: '/',

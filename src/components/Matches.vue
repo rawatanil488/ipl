@@ -18,6 +18,10 @@
     <div class="row">
       <div class="col-md-12">
         <b-table outlined :items="matchesData" :fields="fields" :bordered=false>
+          <template slot="IS_Superover" slot-scope="row">
+            <div v-if="row.item.IS_Superover === 1">YES</div>
+            <div v-if="row.item.IS_Superover === 0">NO</div>
+          </template>
           <template slot="actionDiv" slot-scope="row">
             <button class="btn btn-primary" @click="showDetails(row.item)">Show Details</button>
           </template>
@@ -231,6 +235,16 @@ export default {
         {
           key: 'team2',
           label: 'Team2',
+          sortable: false
+        },
+        {
+          key: 'winnerTeam',
+          label: 'Winning Team',
+          sortable: false
+        },
+        {
+          key: 'IS_Superover',
+          label: 'Win by Superover',
           sortable: false
         },
         {
